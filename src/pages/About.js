@@ -1,10 +1,10 @@
-import { Route, useHistory } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
 // nested routes
 import Offers from "./Offers";
 
 export default function About() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <div className="content">
@@ -29,9 +29,7 @@ export default function About() {
         Recusandae, ad!
       </p>
 
-      <button onClick={() => history.push("/products")}>
-        See Our Products
-      </button>
+      <button onClick={() => navigate("/products")}>See Our Products</button>
 
       {/* <Route path="/about/offers">
         <Offers />
